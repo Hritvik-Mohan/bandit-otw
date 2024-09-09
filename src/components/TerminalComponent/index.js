@@ -1,4 +1,4 @@
-import { Terminal } from "@xterm/xterm"; // No need for "@"
+import { Terminal } from "@xterm/xterm";
 import { useEffect, useRef } from "react";
 import "@xterm/xterm/css/xterm.css";
 
@@ -9,7 +9,7 @@ export default function TerminalComponent() {
 
   useEffect(() => {
     // Create a new WebSocket connection
-    ws.current = new WebSocket('ws://localhost:3000');
+    ws.current = new WebSocket('wss://bandit-otw-api.onrender.com');
 
 
     
@@ -32,7 +32,7 @@ export default function TerminalComponent() {
     if (!terminalRef.current) return;
 
     // Create a new Terminal instance
-    term.current = new Terminal();
+    term.current = new Terminal({rows:80});
 
     // Open the terminal in the container div
     term.current.open(terminalRef.current);
@@ -59,7 +59,7 @@ export default function TerminalComponent() {
 
   return (
     <div>
-      <div id="terminal" ref={terminalRef}></div>
+      <div id="terminal" ref={terminalRef} style={{ height: '100vh', width: '100%' }}></div>
     </div>
   );
 }
