@@ -9,7 +9,7 @@ export default function TerminalComponent() {
 
   useEffect(() => {
     // Create a new WebSocket connection
-    ws.current = new WebSocket('wss://bandit-otw-api.onrender.com');
+    ws.current = new WebSocket('wss://eb99-49-249-133-22.ngrok-free.app/');
 
 
     
