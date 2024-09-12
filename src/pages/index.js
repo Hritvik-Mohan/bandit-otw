@@ -1,11 +1,16 @@
+import Form from "@/components/Form";
 import TerminalComponent from "@/components/TerminalComponent";
+import { useContext } from "react";
+import { Context } from "@/context/context";
 
 export default function Home() {
+  const { localConnection } = useContext(Context);
+  console.log(localConnection);
 
   return (
     <div className="App">
-      {/* <h1>SSH Terminal to Play OverTheWire Bandit</h1> */}
-      <TerminalComponent/>
+        {/* {localConnection.isConnected ? <TerminalComponent /> : <Form />} */}
+        <TerminalComponent />
     </div>
   );
 }
