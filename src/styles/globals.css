@@ -1,7 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind forms;
 
-body {
-  background-color: black;
+
+.terminal-component {
+    /* border-top: 2rem solid black; */
+}
+
+
+.connected-icon {
+    height: 6px;
+    width: 6px;
+    margin-top: 1px;
+    /* background-color: white; */
+    background-color: rgb(16 185 129); 
+    /* border: 3px solid rgb(16 185 129); */
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+.disconnected-icon {
+    height: 6px;
+    width: 6px;
+    margin-top: 1px;
+    /* background-color: white; */
+    background-color: rgb(220 38 38); 
+    /* border: 2px solid rgb(220 38 38); */
+    border-radius: 50%;
+    margin-left: 8px;
 }
